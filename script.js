@@ -41,8 +41,10 @@
   const musicBtn = $('#musicBtn');
   const audio = new Audio('Thandhaay.mp3');
   audio.loop = true; audio.preload = 'auto'; audio.volume = 0;
+  audio.volume = 0.5; const canFade = audio.volume === 0.5; audio.volume = 0;
   function fadeTo(target, ms, done) {
     window.clearInterval(fadeTimer);
+    if (!canFade) { if (done) { done(); } return; }
     const from = audio.volume; const t0 = performance.now();
     fadeTimer = window.setInterval(() => {
       const k = Math.min(1, (performance.now() - t0) / ms);
@@ -66,9 +68,9 @@
     musicOn = true;
     setMusicLabel();
     const p = audio.play();
-    const ok = () => fadeTo(0.7, 2500);
+    const ok = () => { if (musicOn) { fadeTo(0.7, 2500); } };
     const retry = () => {
-      const again = () => { if (musicOn) { audio.play().then(ok).catch(() => {}); } };
+      const again = () => { if (musicOn && audio.paused) { audio.play().then(ok).catch(() => {}); } };
       document.addEventListener('pointerdown', again, { once: true });
     };
     if (p && p.then) { p.then(ok).catch(retry); } else { ok(); }
@@ -76,8 +78,8 @@
   function stopMusic() {
     if (!musicOn) { return; }
     musicOn = false;
-    fadeTo(0, 900, () => { if (!musicOn) { audio.pause(); } });
     setMusicLabel();
+    if (canFade) { fadeTo(0, 700, () => { if (!musicOn) { audio.pause(); } }); } else { audio.pause(); }
   }
   musicBtn.addEventListener('click', () => (musicOn ? stopMusic() : startMusic()));
 
