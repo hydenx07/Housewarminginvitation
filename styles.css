@@ -104,5 +104,5 @@ h1{margin-top:.7rem;font-size:clamp(2.5rem,12vw,4rem);line-height:1.04}
 .land-stage{position:absolute;inset:14px;overflow:hidden;border-radius:4px;background:var(--ivory);container-type:size;pointer-events:none}
 .land-art{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100cqw,56.28cqh);height:max(100cqh,177.67cqw);background:url("bg.jpg") center/100% 100% no-repeat;container-type:size}
 @media (min-aspect-ratio:1/1){.land-art{width:56.28cqh;height:100cqh}}
-.land-dear{position:absolute;left:6.5%;width:48%;top:calc(27% - 4.5cqw);margin:0;text-align:center;font-style:italic;font-size:8.2cqw;line-height:1.1;color:var(--red);text-wrap:balance;animation:dearIn 1s ease .4s both}
+.land-dear{position:absolute;left:2.5%;width:56%;bottom:69.2%;margin:0;text-align:center;font-style:italic;font-size:8.2cqw;line-height:1.15;white-space:nowrap;color:var(--red);animation:dearIn 1s ease .4s both}
 @keyframes dearIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
