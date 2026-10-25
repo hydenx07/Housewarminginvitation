@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>You’re invited · Housewarming</title>
+  <meta name="description" content="Join us to celebrate our new home — 31 October 2026, 5 PM, Citywest, Dublin." />
+  <meta name="theme-color" content="#F4EADA" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-locked photo-pending">
+  <div id="petals" aria-hidden="true"></div>
+  <div class="wash" aria-hidden="true"></div>
+  <div class="scroll-progress" id="progress" aria-hidden="true"></div>
+
+  <section class="landing" id="landing" aria-label="Invitation entrance">
+    <div class="land-frame" aria-hidden="true"></div>
+    <div class="land-stage"><div class="land-art"><p class="land-dear">Dear <span class="guest-name">Friend</span>,</p></div></div>
+    <div class="slide" id="slide" role="slider" tabindex="0" aria-label="Slide to open invitation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span class="slide-fill" id="slideFill"></span>
+      <span class="slide-label">Slide to open invitation</span>
+      <span class="slide-knob" id="slideKnob"><svg viewBox="0 0 64 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/><path d="M20 12h38M48 12v8M56 12v6" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></svg></span>
+    </div>
+  </section>
+
+  <main class="site" id="site">
+    <header class="hero">
+      <p class="eyebrow">Dear <span class="guest-name">Friend</span>, you’re invited</p>
+      <h1>Our Housewarming</h1>
+      <p class="lead">Come, bless our new home</p>
+      <div class="photo-wrap">
+        <i class="bloom b1"></i><i class="bloom b2"></i><i class="bloom b3"></i>
+        <figure class="photo"><img src="photo.jpg" alt="Watercolour portrait of the couple" /></figure>
+      </div>
+      <p class="date-pill">Saturday · 31 October 2026 · 5:00 PM</p>
+    </header>
+
+    <div class="flourish reveal" aria-hidden="true"><svg viewBox="0 0 240 28"><path d="M10 14H98"/><path d="M142 14H230"/><path d="M98 14c-5 0-7-6-3-8 4-1 6 4 3 6"/><path d="M142 14c5 0 7-6 3-8-4-1-6 4-3 6"/><path d="M108 18v-5l12-8 12 8v5Z"/><path d="M117 18v-4h6v4"/></svg></div>
+
+    <section class="countdown reveal">
+      <h2 class="small-head">Until we open our doors</h2>
+      <div class="count-grid">
+        <div class="count-item"><span id="cd-d">00</span><label>Days</label></div>
+        <div class="count-item"><span id="cd-h">00</span><label>Hours</label></div>
+        <div class="count-item"><span id="cd-m">00</span><label>Minutes</label></div>
+        <div class="count-item"><span id="cd-s">00</span><label>Seconds</label></div>
+      </div>
+    </section>
+
+    <section class="message reveal">
+      <p>A new home is only complete when it is filled with the people we love. Join us for an evening of blessings, good food and warm conversation as we open our doors for the very first time.</p>
+    </section>
+
+    <section class="details reveal">
+      <p class="eyebrow gold">When &amp; Where</p>
+      <h2>The Celebration</h2>
+      <div class="card">
+        <div class="row"><b>Date</b><span>Saturday, 31 October 2026</span></div>
+        <div class="row"><b>Time</b><span>5:00 PM</span></div>
+        <div class="row"><b>Venue</b><span>9 Citywest Park Avenue<br />Citywest Park<br />Dublin 24<br />D24 KP3X</span></div>
+        <div class="actions">
+          <button class="btn" id="calBtn" type="button">＋ Add to calendar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-sec reveal">
+      <figure class="map">
+        <svg class="map-art" viewBox="0 0 400 310" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="310" fill="#EADFC6"/><ellipse cx="90" cy="250" rx="90" ry="46" fill="#D3DBB9"/><ellipse cx="330" cy="70" rx="80" ry="40" fill="#D3DBB9"/><rect x="40" y="30" width="70" height="46" rx="4" fill="#E0CFAE"/><rect x="290" y="210" width="80" height="56" rx="4" fill="#E0CFAE"/><rect x="30" y="200" width="60" height="50" rx="4" fill="#E0CFAE"/><rect x="300" y="30" width="60" height="40" rx="4" fill="#E0CFAE"/><g fill="none" stroke-linecap="round"><g stroke="#D2BF98" stroke-width="12"><path d="M0 120H400"/><path d="M130 0V310"/><path d="M0 250C120 220 260 270 400 230"/></g><g stroke="#FCF8F0" stroke-width="8"><path d="M0 120H400"/><path d="M130 0V310"/><path d="M0 250C120 220 260 270 400 230"/></g></g><g transform="translate(200 150)"><circle class="pin-ring" r="22" fill="rgba(139,30,45,.25)"/><path class="pin-drop" d="M0 0c-16-18-24-28-24-40a24 24 0 0 1 48 0c0 12-8 22-24 40Z" fill="#8B1E2D" stroke="#FCF8F0" stroke-width="2.5"/><circle cy="-40" r="8.5" fill="#FCF8F0"/></g></svg>
+        <iframe title="Map to 9 Citywest Park Avenue" loading="lazy" referrerpolicy="no-referrer" src="https://maps.google.com/maps?q=9+Citywest+Park+Avenue+Citywest+Park+Dublin+24+D24+KP3X&amp;t=m&amp;z=16&amp;output=embed"></iframe>
+        <span class="map-chip">9 Citywest Park Avenue</span>
+      </figure>
+      <p class="map-action"><a class="btn solid" id="dirBtn" href="https://www.google.com/maps/search/?api=1&amp;query=9+Citywest+Park+Avenue+Citywest+Park+Dublin+24+D24+KP3X" target="_blank" rel="noreferrer noopener">Get Directions</a></p>
+    </section>
+
+    <footer class="closing reveal">
+      <div class="monogram" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="47"/><path d="M38 66v-8l22-17 22 17v8"/><path d="M44 66v14h32V66"/><text x="60" y="77" text-anchor="middle">9</text></svg></div>
+      <h3>See you soon</h3>
+      <p>With love and gratitude</p>
+    </footer>
+  </main>
+
+  <button class="music-btn" id="musicBtn" type="button" aria-pressed="false">♪ Play music</button>
+  <script src="script.js"></script>
+</body>
+</html>
